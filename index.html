@@ -8,41 +8,37 @@
 </head>
 <body>
     <header class="header-cps">
-        <div class="header-cps__item header-cps__item--menu">
+        <button class="header-cps__button header-cps__button--first">
             <img src="./images/header/SVG-logo-menu.svg" alt="">
-        </div>
-        
-        <!-- Скрытый элемент для  планшета -->
-        <div class="header-cps__item header-cps__item--border-width768">
+        </button>
+        <!-- скрытые элементы -->
+        <div class="header-cps__border header-cps--width-768">
             <img src="./images/header/SVG-logo-border.svg" alt="">
         </div>
-        <!-- ... -->
-
-        <div class="header-cps__item header-cps__item--cps">
-            <img src="./images/header/SVG-logo-CSP.svg" alt="">
-        </div>
-
-        <!-- Скрытые элементы для планшета -->
-        <div class="header-cps__item header-cps__item--dop-elem-width768">
+        <!--  -->
+        <button class="header-cps__button--main">
+            <img src="./images/header/SVG-logo-CSP.svg" alt=""> 
+        </button>
+        <!-- скрытые элементы -->
+        <button class="header-cps__button header-cps--width-768">
             <img src="./images/header/SVG-logo-call.svg" alt="">
-        </div>
-        <div class="header-cps__item header-cps__item--dop-elem-width768">
+        </button>
+        <button class="header-cps__button header-cps--width-768">
             <img src="./images/header/SVG-logo-message.svg" alt="">
-        </div>
-        <div class="header-cps__item header-cps__item--dop-elem-width768 header-cps__item--dop-elem-width768--last">
+        </button>
+        <button class="header-cps__button header-cps--width-768">
             <img src="./images/header/SVG-logo-contact.svg" alt="">
-        </div>
-        <!-- ... -->
-
-        <div class="header-cps__item header-cps__item--border">
+        </button>
+        <!--  -->
+        <div class="header-cps__border">
             <img src="./images/header/SVG-logo-border.svg" alt="">
         </div>
-        <div class="header-cps__item header-cps__item--bild">
+        <button class="header-cps__button header-cps--last">
             <img src="./images/header/SVG-logo-bild.svg" alt="">
-        </div>
-        <div class="header-cps__item header-cps__item--search">
+        </button>
+        <button class="header-cps__button header-cps--last header-cps--last--width-768">
             <img src="./images/header/SVG-logo-search.svg" alt="">
-        </div>
+        </button>
     </header>
     <main class="main-cps">
         <div class="main-title">
@@ -50,41 +46,47 @@
             <div class="main-title__text">
                 <h1 class="main-title__text main-title__text--h1">Услуги и сервисы</h1>
             </div>
-            <!-- Скрытые элементы для десктопа -->
-            <div class="main-title__logo-width1120 main-title__logo-width1120--p-text">Остваить заявку</div>
-            <div class="main-title__logo-width1120">
-                <img src="./images/header/SVG-logo-bild.svg" alt="">
-            </div>
-            <div class="main-title__logo-width1120 main-title__logo-width1120--p-text">Статус ремонта</div>
-            <div class="main-title__logo-width1120">
-                <img src="./images/header/SVG-logo-search.svg" alt="">
-            </div>
+            <button class="main-title__button main-title__button--width-768">
+                <p class="main-title__text--p">Оставить заявку</p>
+                <div class="main-title__image">
+                    <img class="main-title__item" src="./images/header/SVG-logo-bild.svg" alt="">
+                </div>
+            </button>
+            <button class="main-title__button main-title__button--width-768">
+                <p class="main-title__text--p">Статус ремонта</p>
+                <div class="main-title__image">
+                    <img class="main-title__item" src="./images/header/SVG-logo-search.svg" alt="">
+                </div>
+            </button>
         </div>
-        <div class="main-menu">
-            <div class="main-menu__item"><p class="main-menu__item--p main-menu__item--p--focus">Ремонтируемые бренды</p></div>
-            <div class="main-menu__item"><p class="main-menu__item--p">Ремонтируемые устройства</p></div>
-            <div class="main-menu__item"><p class="main-menu__item--p">Цены на услуги</p></div>
-            <div class="main-menu__item"><p class="main-menu__item--p">Адреса сервисных центров</p></div>
-            <div class="main-menu__item"><p class="main-menu__item--p">Специальные цены</p></div>
-            <div class="main-menu__item"><p class="main-menu__item--p main-menu__item--p--last-width-1120">Отзывы</p></div>
-        </div>
-        <div class="main-text-next-image">
-            <div class="main-text-next">
-                <div class="main-text">
-                    <p class="main-text__item">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+        <nav class="main-menu">
+            <ul class="main-menu__list">
+                <li class="main-menu__item"><a href="#" class="main-menu__item--link main-menu__item--link--active">Ремонтируемые бренды</a></li>
+                <li class="main-menu__item"><a href="#" class="main-menu__item--link">Ремонтируемые устройства</a></li>
+                <li class="main-menu__item"><a href="#" class="main-menu__item--link">Цены на устройства</a></li>
+                <li class="main-menu__item"><a href="#" class="main-menu__item--link">Адреса сервисных центров</a></li>
+                <li class="main-menu__item"><a href="#" class="main-menu__item--link">Специальные цены</a></li>
+                <li class="main-menu__item"><a href="#" class="main-menu__item--link">Отзывы</a></li>
+            </ul>
+        </nav>
+        <article class="main-text">
+            <article class="main-text__text-and-next">
+                <article class="main-text__text">
+                    <p class="main-text__item">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p><br class="main-text__item--text-width768">
                     <p class="main-text__item main-text__item--text-width768">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера<span class="main-text__item--text-width1120">, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span></p>
-                </div>
-                <div class="main-next">
-                    <div class="main-next__icon">
-                        <img src="./images/main/SVG-next.svg" alt="">
-                    </div>
-                    <p class="main-next__text">Читать далее</p>
-                </div>
-            </div>
-            <div class="main-image">
-                <img class="main-image__item" src="./images/main/JPG-image.jpg" alt="">
-            </div>
-        </div>
+                </article>
+                <button class="main-text__next">
+                    <img class="main-text__next--image" src="./images/main/SVG-next.svg" alt="">
+                    <p class="main-text__next--text">Читать далее</p>
+                </button>
+            </article>
+            <article class="main-text__image">
+                 <img class="main-text__image--item" src="./images/main/JPG-image.jpg" alt="">
+            </article>
+        </article>
     </main>
 </body>
 </html>
+
+
+                   

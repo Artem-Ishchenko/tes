@@ -2,11 +2,9 @@
 
 /*Скрытые элементы мобильной версии*/
 @media (max-width: 767px) {
+
     /*Головная часть (скрытая)*/
-    .header-cps__item--border-width768 {
-        display: none;
-    }    
-    .header-cps__item--dop-elem-width768 {
+    .header-cps--width-768 {
         display: none;
     }
 
@@ -14,60 +12,71 @@
     .main-text__item--text-width768 {
         display: none;
     }  
+    .main-text__item--text-width768 {
+        margin-top: 34px;
+    }
 }
 
 /*Скрытое для пк*/
-@media (max-width: 1119px ){
-    .main-title__logo-width1120 {
+@media (max-width: 1118px ){
+    .main-text__item--text-width1120 {
         display: none;
     }
-    .main-text__item--text-width1120 {
+    .main-title__button--width-768 {
         display: none;
     }
 }
 
 /*Мобильная версия*/
-
-html, body{
+html, body, button{
     font-family:'TT Lakes', Times, serif;
     font-size: 16px;
     margin: 0;
     padding: 0;
     background-color: #F8F8F8;
 }
+
 /*Головная часть*/
 .header-cps {
     display: flex;
-    justify-content: center;
     background-color: #FFFFFF;
     border-bottom: 1px solid #D9FFF5;
     height: 87px;
     margin-bottom: 24px;
 }
-.header-cps__item {
+.header-cps__button {
+    width: 40px;
+    height: 40px;
+    background-color: #FF3E79;
+    border: none;
+    border-radius: 100%;
     margin-top: auto;
     margin-bottom: auto;
-}
-
-.header-cps__item--menu {
-    margin-left: 16px;
-    margin-right: auto;
-}
-.header-cps__item--cps {
-    margin-left: auto;
-    margin-right: auto;
-}
-.header-cps__item--border {
-    margin-left: auto; 
-    margin-right: 20px;
-}
-.header-cps__item--bild {
-    margin-left: 0;
     margin-right: 16px;
+    margin-left: 16px;
 }
-.header-cps__item--search {
+.header-cps__button > img {
+    vertical-align: middle;
+}
+.header-cps__button--main {
+    width: 98px;
+    height: 52px;
+    border: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    background-color: #FFFFFF;
+}
+.header-cps__border {
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-right: 20px;
+    margin-left: auto;
+}
+.header-cps--last {
     margin-left: 0;
-    margin-right: 16px;;
 }
 
 /*Тело сайта*/
@@ -96,125 +105,140 @@ html, body{
 
 /*Тело - слайдер*/
 .main-menu {
-    display: flex;   
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.main-menu__list {
+    list-style-type: none;
+    padding-inline-start: 0px;
+    margin: 0;
+    margin-left: 16px;
+    margin-right: 16px;
+    display: flex;
     flex-wrap: nowrap;
     overflow: auto;
+    white-space: nowrap;
 }
 .main-menu__item {
-    margin-left: 16px; 
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
 }
-.main-menu__item:last-child {
-    margin-right: 8px; 
+.main-menu__item--link:active {
+    text-decoration: none;
 }
-.main-menu__item--p {
+.main-menu__item--link:hover {
+    border-color: #41F6D7;
+}
+.main-menu__item--link {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
     line-height: 24px;
+    letter-spacing: -0.2px;
     border: 2px solid #F8F8F8;
     border-radius: 5px;
     padding-top: 8px;
     padding-bottom: 8px;
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: center;
-    white-space: nowrap;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    padding-left: 16px;
+    padding-right: 10px;
 }
-.main-menu__item--p--focus {
-    border: 2px solid #41F6D7;   
+.main-menu__item--link--active {
+    border-color: #41F6D7;
 }
 
 /*Тело - основной текст*/
-.main-text {
-    margin: 0 16px;
+.main-text__text-and-next {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.main-text__text {
+    margin-bottom: 16px;
 }
 .main-text__item {
     margin: 0;
     font-size: 14px;
     line-height: 18px;
-    text-align: left;
     letter-spacing: 0.2px;
 }
 
 /*Тело - Читать далее*/
-.main-next {
+.main-text__next {
     display: flex;
-    margin-left: 16px;
-    margin-top: 16px;
     margin-bottom: 16px;
+    border: none;
 }
-.main-next__icon {
-    width: 24px;
-    height: 24px;
-    align-self: center;
+.main-text__next--image {
+    margin-right: 8px;
 }
-.main-next__text {
-    line-height: 24px;
+.main-text__next--text {
     margin: 0;
-    margin-left: 8px;
+    line-height: 24px;
     letter-spacing: -0.2px;
     font-weight: 500;
 }
 
 /*Тело - Картинка*/
-.main-image {
+.main-text__image {
     text-align: center;
 }
-.main-image__item {
-    width: 320px;
+.main-text__image--item {
     height: 176px;
+    width: 320px;
 }
 
 /*Для планшета (ширина более - 768)*/
 @media (min-width: 768px) {
 
     /*Головная часть (планшет)*/
-    .header-cps__item--border,
-    .header-cps__item--border-width768 {
-        margin-left: 20px; 
-        margin-right: 20px;
-    }
-    .header-cps__item--menu {
-        margin-left: 16px;
-        margin-right: 0px;
-    }
-    .header-cps__item--cps {
-        margin-left: 0;
+    .header-cps__button--main {
         margin-right: auto;
     }
-    .header-cps__item--dop-elem-width768 {
-        margin-right: 16px;
+    .header-cps__border {
+        margin-left: 20px;
+        margin-right: 20px;
     }
-    .header-cps__item--dop-elem-width768--last {
+    .header-cps--width-768 {
         margin-right: 0;
+        margin-left: 16px;
+    }
+    .header-cps__button--first {
+        margin-left: 24px;
+        margin-right: 0;
+    }
+    .header-cps--last--width-768 {
+        margin-right: 24px;
+    }
+    .header-cps__border.header-cps--width-768 {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    /*Тело - слайдер*/
+    .main-menu {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+    .main-menu__list {
+        margin-left: 24px;
+        margin-right: 24px;
     }
 
     /*Тело - текст (планшет)*/
-    .main-text__item--text-width768 {
-        margin-top: 20px;
-    }
-    /*Тело - текст, далее, картинка (планшет)*/
-    .main-text-next-image {
+    .main-text {
         display: flex;
-        justify-content: center;
+        margin-left: 24px;
+        margin-right: 24px;
     }
-    .main-text-next {
-        margin-left: 16px;
+    .main-text__text-and-next {
+        margin: 0;
         margin-right: 48px;
     }
-    .main-text {
-        width: 312px;
-        height: 160px;
-    }
-    .main-next {
-        margin-top: auto;
-        margin-bottom: 14px;
-    }
-    .main-image {
-        margin-right: 40px;
-    }
-    .main-image__item {
-        width: 360px;
+
+    /*Тело - картинка (планшет)*/
+    .main-text__image--item {
         height: 208px;
+        width: 360px;
         border-radius: 10px;
     }
 }
@@ -231,6 +255,7 @@ html, body{
         display: flex;
         justify-content: center;
         margin-top: 42px;
+        margin-right: 32px;
     }
     .main-title__text {
         margin-left: 28px;
@@ -238,71 +263,56 @@ html, body{
     .main-title__text--h1 {
         margin-left: 0;
     }
-    .main-title__border {
-        margin-right: 0;
+    .main-title__image {
+        width: 40px;
+        height: 40px;
+        background-color: #FF3E79;
+        border-radius: 100%; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    .main-title__logo-width1120 {
-        margin-right: 32px;
+    .main-title__button {
+        display: flex;
+        align-items: center;
+        border: none;
+        margin-left: 32px;
     }
-    .main-title__logo-width1120--p-text {
+    .main-title__text--p {
         line-height: 24px;
         margin: 0;
         margin-right: 8px;
         letter-spacing: -0.2px;
         font-weight: 500;
-        align-items: center;
-        display: flex;
-        align-items: center;
     }
+
     /*Тело - слайдер (выравнивание относительно заголовка сайта)*/
-    .main-menu__item--p {
+    .main-menu {
         margin-top: 8px;
         margin-bottom: 8px;
     }
-    .main-menu {
-        justify-content: center;
+    .main-menu__list {
         margin-left: 32px;
-        margin-right: 25px;
+        margin-right: 32px;
         flex-wrap: wrap;
+        justify-content: center;
     }
     .main-menu__item {
+        margin-left: 0;
         margin-right: auto;
-        margin-left: auto;
-        align-self: center;
-    } 
-    .main-menu__item:last-child {
-        margin-right: auto;
-        margin-left: 0; 
     }
-    .main-menu__item--p--last-width-1120 {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
+
     /*Тело - картинка (размер и отступы)*/
-    .main-image__item {
+    .main-text__image--item {
         width: 531px;
         height: 307px;
-        border-radius: 10px;
     }
+
     /*Тело - основной текст (выравнивание)*/
-    .main-text-next-image {
-        margin-right: 29px;
-        margin-left: 34px;
-        margin-top: 20px;
-    }
-    .main-text-next {
-        margin-left: 34px;
-        margin-right: 36px;
-    }
     .main-text {
-        width: 490px;
-        height: 160px;
-        margin: 0;
+        margin-left: 34px;
     }
-    .main-next {
-        margin-left: 0;
-    }
-    .main-text__item--text-width1120 {
-        display: inline;
-    }
+    .main-text__text-and-next {
+        margin-right: 36px;
+    }  
 }
