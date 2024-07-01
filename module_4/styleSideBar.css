@@ -1,0 +1,164 @@
+body, html {
+    width: 320px;
+    height: 100%;
+}
+body{
+    box-shadow: 
+    16px 0px 52px 0px #0E185033,
+    -2px 0px 4px 0px #454F7E05;
+}
+body, html, button {
+    font-family:'TT Lakes', Times, serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+}
+
+/* Головная часть Сайд-бара */
+.header-side-bar {
+    height: 86px;
+    display: flex;
+}
+.header-side-bar__button {
+    width: 40px;
+    height: 40px;
+    background-color: #FF3E79;
+    border: none;
+    border-radius: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 24px;
+    margin-right: 17px;
+}
+
+.header-side-bar__button > img{
+    vertical-align: middle;
+}
+
+.header-side-bar__button--main {
+    width: 98px;
+    height: 52px;
+    border: none;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.header-side-bar__button--right {
+    margin-right: 24px;
+    margin-left: auto;
+}
+
+/* Список Сайд-бара */
+
+.main-side-bar__list {
+    list-style-type: none;
+    padding: 0px;   
+    margin-top: 30px;
+}
+
+.main-side-bar__item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.main-side-bar__border {
+    order: -1;
+    width: 4px;
+    min-height: 40px;
+    background-color: #FFFFFF;
+    border-radius: 0 50px 50px 0;
+}
+.main-side-bar__button {
+    text-align: start;
+    margin-left: 20px;
+    border: none;
+    color: #1B1C21;
+    font-weight: 600;
+    transition-duration: 0.5s;
+}
+.main-side-bar__button:hover,
+.main-side-bar__button:active,
+.main-side-bar__button:focus {
+    color: #7E7E82;
+}
+
+.main-side-bar__button:hover + .main-side-bar__border,
+.main-side-bar__button:active + .main-side-bar__border,
+.main-side-bar__button:focus + .main-side-bar__border {
+    background-color: #41F6D7;
+    transition-duration: 0.2s;
+    transform: rotateX(180deg);
+}
+/* footer */
+/* Нижнии кнопки Сайд-бар */
+
+.footer-side-bar {
+    margin-top: 244px;
+    margin-bottom: 32px;
+}
+.footer-side-bar__button-all {
+    margin-right: auto;
+    margin-left: 24px;
+    display: flex;
+    margin-bottom: 16px;
+}
+.footer-side-bar__button {
+    width: 40px;
+    height: 40px;
+    background-color: #FF3E79;
+    border: none;
+    border-radius: 100%;
+    margin-right: 16px;
+}
+.footer-side-bar__button > img {
+    vertical-align: middle;
+}
+
+/* Ссылки на сайт Сайд-бар */
+.footer-side-bar__mail {
+    display: block;
+    text-decoration: none;
+    color: #1B1C21;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin-left: 24px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+.footer-side-bar__number {
+    display: block;
+    text-decoration: none;
+    color: #1B1C21;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    font-weight: bold;
+    margin-left: 24px;
+}
+/* Языки Сайд-бар */
+
+.footer-side-bar__list-lang {
+    display: flex;
+    padding: 0;
+    margin-bottom: 0px;
+    margin-left: 24px;
+    margin-right: auto;
+    margin-top: 40px;
+}
+.footer-side-bar__item-lang {
+    list-style-type: none;  
+    margin-right: 7px; 
+}
+.footer-side-bar__button-lang {
+    border: none;
+    font-weight: 600;
+}
+.footer-side-bar__button-lang--active{
+    color: #7E7E82;
+}
+.footer-side-bar__button-lang:focus,
+.footer-side-bar__button-lang:hover {
+    transition-duration: 0.5s;   
+    color: #7E7E82;
+}
