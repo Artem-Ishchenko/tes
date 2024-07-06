@@ -1,318 +1,237 @@
-/*Для мобильной версии (основа)*/
-
-/*Скрытые элементы мобильной версии*/
-@media (max-width: 767px) {
-
-    /*Головная часть (скрытая)*/
-    .header-cps--width-768 {
-        display: none;
-    }
-
-    /*Текст скрытый*/
-    .main-text__item--text-width768 {
-        display: none;
-    }  
-    .main-text__item--text-width768 {
-        margin-top: 34px;
-    }
-}
-
-/*Скрытое для пк*/
-@media (max-width: 1118px ){
-    .main-text__item--text-width1120 {
-        display: none;
-    }
-    .main-title__button--width-768 {
-        display: none;
-    }
-}
-
-/*Мобильная версия*/
-html, body, button{
-    font-family:'TT Lakes', Times, serif;
-    font-size: 16px;
-    margin: 0;
+body, html {
+    font-family: 'TT Lakes', Times, serif;
     padding: 0;
+    margin: 0;
     background-color: #F8F8F8;
 }
+/* Отключаю булеты вручную, потому что 
+сами они почему-то выключаются через раз;
+Отключаю декоративную прозрачность в конце у свайпера */
+@media (min-width: 768px) {
+    .block-repair-slider .swiper-pagination-bullet {
+        display: none;
+    }
+    .wrapper-transparent {
+        display: none;
+    }
+    /* меняю хедер при достижении определенной высоты */
+    .block-repair .block-repair__header {
+        height: 56px;
+        margin-bottom: 24px;
+        padding-left: 24px;
+    }
+}
 
-/*Головная часть*/
-.header-cps {
-    display: flex;
+/* Хедер */
+.block-repair__header {
+    height: 80px;
+    box-sizing: border-box;
+    padding: 16px;
     background-color: #FFFFFF;
-    border-bottom: 1px solid #D9FFF5;
-    height: 87px;
-    margin-bottom: 24px;
-}
-.header-cps__button {
-    width: 40px;
-    height: 40px;
-    background-color: #FF3E79;
-    border: none;
-    border-radius: 100%;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 16px;
-    margin-left: 16px;
-}
-.header-cps__button > img {
-    vertical-align: middle;
-}
-.header-cps__button--main {
-    width: 98px;
-    height: 52px;
-    border: none;
-    margin-top: auto;
-    margin-bottom: auto;
-    text-align: left;
-    display: flex;
-    justify-content: center;
-    background-color: #FFFFFF;
-}
-.header-cps__border {
-    margin-bottom: auto;
-    margin-top: auto;
-    margin-right: 20px;
-    margin-left: auto;
-}
-.header-cps--last {
-    margin-left: 0;
-}
-
-/*Тело сайта*/
-.main-title {
-    display: flex;
-}
-
-/*Тело - декор для заголовка*/
-.main-title__border {
-    width: 4px;
-    min-height: 40px;
-    background-color: #41F6D7;
-    border-radius: 0 50px 50px 0;
-    margin-right: 12px;
-}
-
-/*Тело - текст заголовка*/
-.main-title__text {
-    margin-right: auto;
-}
-.main-title__text--h1 {
-    font-size: 28px;
-    line-height: 40px;
-    margin: 0;
-}
-
-/*Тело - слайдер*/
-.main-menu {
-    margin-top: 24px;
-    margin-bottom: 24px;
-}
-.main-menu__list {
-    list-style-type: none;
-    padding-inline-start: 0px;
-    margin: 0;
-    margin-left: 16px;
-    margin-right: 16px;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow: auto;
-    white-space: nowrap;
-}
-.main-menu__item {
-    vertical-align: middle;
+    border-top: 1px solid #D9FFF5;
+    margin-bottom: 16px;
     display: flex;
     align-items: center;
 }
-.main-menu__item--link:active {
-    text-decoration: none;
-}
-.main-menu__item--link:hover {
-    border-color: #41F6D7;
-}
-.main-menu__item--link {
-    text-decoration: none;
-    color: black;
+.block-repair__header-text {
+    text-transform: uppercase;
     font-size: 16px;
+    font-weight: 400;
     line-height: 24px;
     letter-spacing: -0.2px;
-    border: 2px solid #F8F8F8;
-    border-radius: 5px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 16px;
-    padding-right: 10px;
+    margin: 0;
 }
-.main-menu__item--link--active {
-    border-color: #41F6D7;
+/* Для мобилки */
+/* Слайдер - стилизация */
+.block-repair-slider__wrapper {
+    margin-left: 16px;
 }
 
-/*Тело - основной текст*/
-.main-text__text-and-next {
-    margin-left: 16px;
+.block-repair-slider__block {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    border: 1px solid #EAEAEA;
+    background: #FFFFFF;
+    border-radius: 10px;
+    width: 240px;
+    height: 72px;
+    box-sizing: border-box;
+}
+.block-repair-slider__block > img {  
+    margin: auto auto auto 16px;
+}
+.block-repair-slider__slide {
+    width: auto;
     margin-right: 16px;
 }
-.main-text__text {
-    margin-bottom: 16px;
+.block-repair-slider {
+    overflow: hidden;
 }
-.main-text__item {
-    margin: 0;
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: 0.2px;
+/* Добавляет прозрачности справа свайпера 
+и убираю его при достижении определенной ширины выше*/
+.wrapper-transparent {
+    width: 24px;
+    height: 72px;
+    background-image: linear-gradient(to right, transparent, #F8F8F8);
+    position: absolute;
+    top: 96px;
+    right: 0;  
+    z-index: 10;
 }
-
-/*Тело - Читать далее*/
-.main-text__next {
-    display: flex;
-    margin-bottom: 16px;
-    border: none;
-}
-.main-text__next--image {
-    margin-right: 8px;
-}
-.main-text__next--text {
-    margin: 0;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    font-weight: 500;
-}
-
-/*Тело - Картинка*/
-.main-text__image {
+/* Кнопка */
+.block-repair-slider__button {
+    margin: auto 16px auto auto;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #FF3E79;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: transparent;
     text-align: center;
 }
-.main-text__image--item {
-    height: 176px;
-    width: 320px;
+.block-repair-slider__button:hover {
+    background-color: pink;
+    transition: background 0.5s ease;
 }
-
-/*Для планшета (ширина более - 768)*/
+/* Стилизация кнопки на CSS */
+.button__part-one-line {
+    width: 7px;
+    height: 2px;
+    background: #FF3E79; 
+    border-radius: 2px;
+    position: relative;
+    rotate: 45deg;
+    top: -1px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.button__part-two-line {
+    width: 7px;
+    height: 2px;
+    background: #FF3E79; 
+    border-radius: 2px;
+    position: relative;
+    rotate: -45deg;
+    top: 1px;
+    right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Булеты в слайдере */
+.swiper-pagination-bullets {
+    position: static;
+    margin-top: 16px;
+}
+.swiper-pagination-bullet {
+    background-color: grey;
+    width: 12px;
+    height: 12px;
+}
+/* меняю стили отступов и т.п. 
+в зависимости от разрешения */
 @media (min-width: 768px) {
-
-    /*Головная часть (планшет)*/
-    .header-cps__button--main {
-        margin-right: auto;
-    }
-    .header-cps__border {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-    .header-cps--width-768 {
-        margin-right: 0;
-        margin-left: 16px;
-    }
-    .header-cps__button--first {
-        margin-left: 24px;
-        margin-right: 0;
-    }
-    .header-cps--last--width-768 {
+    .block-repair-slider {
+        margin: 24px;
         margin-right: 24px;
-    }
-    .header-cps__border.header-cps--width-768 {
-        margin-right: 20px;
-        margin-left: 20px;
-    }
-
-    /*Тело - слайдер*/
-    .main-menu {
-        margin-top: 32px;
-        margin-bottom: 32px;
-    }
-    .main-menu__list {
         margin-left: 24px;
-        margin-right: 24px;
     }
-
-    /*Тело - текст (планшет)*/
-    .main-text {
+    .block-repair-slider__wrapper {
         display: flex;
-        margin-left: 24px;
-        margin-right: 24px;
-    }
-    .main-text__text-and-next {
+        flex-flow: row wrap;
+        justify-content: start;
+        gap: 24px;
         margin: 0;
-        margin-right: 48px;
+    }
+    .block-repair-slider__slide {
+        margin-right: 0;
+        margin-left: 0;
     }
 
-    /*Тело - картинка (планшет)*/
-    .main-text__image--item {
-        height: 208px;
-        width: 360px;
-        border-radius: 10px;
+    .block-repair-slider__block {
+        width: 224px;
     }
 }
-
-/*Для десктопа (ширина более - 1120)*/
-@media (min-width: 1119px) {
-
-    /*Головная часть - скрытие хедера*/
-    .header-cps {
+@media (min-width: 1120px) {
+    .block-repair .block-repair__header {
+        padding-left: 32px;
+    }
+    .block-repair-slider {
+        margin-right: 32px;
+        margin-left: 32px;
+        padding-bottom: 0;
+    }
+    .block-repair-slider__block {
+        width: 240px;
+        margin: 0;
+    }
+    .block-repair-slider__wrapper {
+        row-gap: 16px;
+        column-gap: 32px;
+    }
+}
+/* Кнопка ЕЩЕ */
+@media (max-width: 767px) {
+    .block-repair .block-repair__button-next{
         display: none;
     }
-    /*Тело -текст (добавление элементов с текстом)*/
-    .main-title {
-        display: flex;
-        justify-content: center;
-        margin-top: 42px;
-        margin-right: 32px;
-    }
-    .main-title__text {
-        margin-left: 28px;
-    }
-    .main-title__text--h1 {
-        margin-left: 0;
-    }
-    .main-title__image {
-        width: 40px;
-        height: 40px;
-        background-color: #FF3E79;
-        border-radius: 100%; 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .main-title__button {
-        display: flex;
-        align-items: center;
-        border: none;
+}
+@media (min-width: 1120px) {
+    .block-repair .block-repair__button-next{
         margin-left: 32px;
     }
-    .main-title__text--p {
-        line-height: 24px;
-        margin: 0;
-        margin-right: 8px;
-        letter-spacing: -0.2px;
-        font-weight: 500;
+}
+@media (min-width: 1664px) {
+    .block-repair .block-repair__button-next {
+        display: none;
     }
-
-    /*Тело - слайдер (выравнивание относительно заголовка сайта)*/
-    .main-menu {
-        margin-top: 8px;
-        margin-bottom: 8px;
-    }
-    .main-menu__list {
-        margin-left: 32px;
-        margin-right: 32px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .main-menu__item {
-        margin-left: 0;
-        margin-right: auto;
-    }
-
-    /*Тело - картинка (размер и отступы)*/
-    .main-text__image--item {
-        width: 531px;
-        height: 307px;
-    }
-
-    /*Тело - основной текст (выравнивание)*/
-    .main-text {
-        margin-left: 34px;
-    }
-    .main-text__text-and-next {
-        margin-right: 36px;
-    }  
+}
+.block-repair__button-next {
+    width: 134px;
+    height: 24px ;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: TT Lakes;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    margin-left: 24px;
+}
+.block-repair__button-next:hover {
+    color: gray;
+    transition: color 0.5s ease;
+}
+.block-repair__arrow {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.block-repair__arrow-part-one {
+    width: 4px;
+    height: 4px;
+    border: 2px solid #41F6D7;
+    border-radius: 20%;
+    border-width: 0 2px 2px 0;
+    rotate: 45deg;
+}
+.block-repair__arrow-part-two {
+    width: 4px;
+    height: 4px;
+    border: 2px solid #41F6D7;
+    border-radius: 20%;
+    border-width: 0 2px 2px 0;
+    rotate: 45deg;
+}
+/* вспомогательный класс */
+.disable {
+    display: none;
 }

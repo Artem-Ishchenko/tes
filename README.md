@@ -1,1 +1,0 @@
-# Artem-Ishchenko.github.io
